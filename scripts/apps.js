@@ -1,11 +1,11 @@
-//Simulador para que le muestra al especialista en salud, sobre el descuento de un grupo de citas, donde si el usuario escoge una cita
-//le da un descuento de 1%, si escoge dos citas un descuento de 2% y así hasta llegar a 10 citas, que equivalen 10% de descuento.
-//También el sistema realiza un calculo para colocarlo en moneda colombiana, tanto si escoge en dolares o en euros.
-//Nota: La pagina web se uso usando boostrat de una plantilla
+//Simulador para que le muestra al sicologo, sobre el descuento de un número de citas, donde si el usuario escoge una cita
+//le da un descuento de 1%, si escoge dos citas un descuento de 2% y así hasta llegar a 10 citas, que equivaldrían al 10% de descuento.
+//También el sistema realiza un calculo para corvertir en moneda colombiana, tanto si escoge si el paciente paga en dolares o en euros.
+//Nota: La pagina web se uso usando boostrat de una plantilla (https://startbootstrap.com/theme/freelancer)
 
 
 //Saludo inicial al usuario
-alert("Bienvenido a nuestro SIMULADOR DE CALCULCO. Nota: La información del desarrollo de este ejercicio se encuentra en la consola");
+alert("Bienvenido a nuestro SIMULADOR DE CALCULO. Nota: La información del desarrollo de este ejercicio se encuentra en la consola");
 
 //Variables iniciales
 let nombrePaciente = prompt("Escriba su nombre");
@@ -18,14 +18,14 @@ let precioEuro = 25;
 let precioConsulta = 0;
 let validacionCorrecta = false;
 
-//Función que reliza el cambio de moneda (Euro a peso colombiao // dolar a peso colombiano)
+//Función que realiza el cambio de moneda (Euro a peso colombiano // dolar a peso colombiano)
 function calculoMoneda(valorcConsuta, tasaCambio) {
 
     return valorcConsuta * tasaCambio;
 
 }
 
-//Validación para que el usuario solo escoja entre 1 y 10 número de consultas, y sino arroje un error
+//Validación para que el usuario solo escoja entre 1 y 10 números de consultas a tratar con el sicologo, y sino arroja un error
 if (numeroConsultas >= 1 && numeroConsultas <= 10) {
 
     //Validación para que el usuario solo escoja el número 1 (dolar) o número 2 (euro)
@@ -63,6 +63,7 @@ let porcentajeDescuento = 0;
 if (validacionCorrecta == true) {
 
     console.log("El precio normal de una consulta es: "+precioConsulta);
+    
     for (let i = 1; i <= numeroConsultas; i++) {
 
         descuentoCita = 0;
